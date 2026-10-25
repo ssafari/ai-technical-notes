@@ -18,7 +18,7 @@ $(\^{y}=\beta _{0}+\beta _{1}x_{1}+\beta _{2}x_{2}+\dots +\beta _{n}x_{n})$
 
 Ordinary Least Squares (OLS) or Mean Squared Error (MSE). It squares the errors (residuals) to penalize larger mistakes heavily:
 
-$J(\beta )=\frac{1}{m}\sum _{i=1}^{m}(y^{(i)}-\^{y}^{(i)})^{2}$
+$(J(\beta )=-\frac{1}{m}\sum _{i=1}^{m}\left[y^{(i)}\log (p^{(i)})+(1-y^{(i)})\log (1-p^{(i)})\right])$
 
 ### 3. Optimization Algorithm (How it learns)
 
