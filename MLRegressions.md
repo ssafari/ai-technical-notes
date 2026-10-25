@@ -4,9 +4,9 @@ The algorithm finds the line of best fit through your data points by minimizing 
 
 ### 1. Mathematical Equation
 
-$(\^{y}=\beta _{0}+\beta _{1}x_{1}+\beta _{2}x_{2}+\dots +\beta _{n}x_{n})$
+$(\hat{y}=\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\dots +\beta_{n}x_{n})$
 
-- $(\^{y})$  is the predicted continuous output.
+- $(\hat{y})$  is the predicted continuous output.
 
 - $(\beta _{0})$ is the intercept (y-axis crossing point).
 
@@ -18,7 +18,7 @@ $(\^{y}=\beta _{0}+\beta _{1}x_{1}+\beta _{2}x_{2}+\dots +\beta _{n}x_{n})$
 
 Ordinary Least Squares (OLS) or Mean Squared Error (MSE). It squares the errors (residuals) to penalize larger mistakes heavily:
 
-$(J(\beta )=-\frac{1}{m}\sum _{i=1}^{m}\left[y^{(i)}\log (p^{(i)})+(1-y^{(i)})\log (1-p^{(i)})\right])$
+$J(\beta )=\frac{1}{m}\sum_{i=1}^{m}(y^{(i)}-\hat{y}^{(i)})^{2}$
 
 ### 3. Optimization Algorithm (How it learns)
 
@@ -33,7 +33,7 @@ The algorithm calculates a probability score using a linear relationship, then b
 
 First, it calculates a linear combination (\(z\)), just like linear regression:
 
-$(z=\beta _{0}+\beta _{1}x_{1}+\beta _{2}x_{2}+\dots +\beta _{n}x_{n})$
+$(z=\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\dots +\beta_{n}x_{n})$
 
 Then, it maps $(z)$ into the Sigmoid (Logistic) Function to calculate the final probability $(p)$:
 
