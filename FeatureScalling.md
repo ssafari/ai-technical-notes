@@ -25,17 +25,17 @@ Not every machine learning algorithm requires feature scaling. The necessity is 
 
 ### 3. Common Feature Scaling Methods
 
-- Normalization (Min-Max Scaling): Transforms data to a bounded range, typically 0 to 1.
+- **Normalization (Min-Max Scaling)**: Transforms data to a bounded range, typically 0 to 1.
 
 $\text{New\ }X=\frac{X-X_{\text{min}}}{X_{\text{max}}-X_{\text{min}}}$
 
 Best for: Algorithms that expect a bounded range (e.g., Image Processing / RGB values) or when you do not know the underlying distribution. However, it is highly sensitive to outliers. 
-- `Standardization (Z-Score Normalization)`: Centers data to have a mean of 0 and a standard deviation of 1:
+- **Standardization** (`Z-Score Normalization`): Centers data to have a mean of 0 and a standard deviation of 1:
 
 $\text{New\ }X=\frac{X-\mu }{\sigma }$
 
 Best for: Most optimization algorithms (SVM, Logistic Regression) because it preserves variance ratios and handles outliers slightly better than Min-Max. 
-- `Robust Scaling`: Uses the median and Interquartile Range (IQR) to scale features.
+- **Robust Scaling**: Uses the median and Interquartile Range (IQR) to scale features.
 Best for: Datasets filled with significant outliers, ensuring extreme data points don't collapse normal values into an unreadable micro-range. 
 Note: Always remember to fit your scalers only on your training set and then transform your test set to prevent critical data leakage. 
 
