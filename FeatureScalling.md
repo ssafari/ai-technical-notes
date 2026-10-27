@@ -50,6 +50,9 @@ Not every algorithm requires feature scaling. Tree-based models do not calculate
 - Gradient Boosting (`XGBoost`, `LightGBM`)
 
 ```
-⚠️ Best Practice Hint: Always perform feature scaling after splitting your data into training and testing sets. You must .fit() your scaler only on the training data, and then use it to .transform() both sets. Fitting on the entire dataset introduces data leakage, allowing test-set metrics to contaminate your training parameters.
-
+⚠️ Best Practice Hint: Always perform feature scaling after splitting 
+your data into training and testing sets. You must .fit() your scaler 
+only on the training data, and then use it to .transform() both sets. 
+Fitting on the entire dataset introduces data leakage, allowing 
+test-set metrics to contaminate your training parameters.
 ```
